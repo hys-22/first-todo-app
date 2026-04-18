@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoアプリ</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Todoアプリ</h1>
+
+    <input id="taskInput" type="text" placeholder="タスク入力">
+    <input id="dateInput" type="date">
+
+    <button onclick="addTask()">追加</button>
+    <button onclick="filterAll()">全部</button>
+    <button onclick="filterDone()">完了</button>
+    <button onclick="filterUndone()">未完了</button>
+
+
+    <h2>カレンダー</h2>
+    <div id="calendarHeader">
+     <button onclick="prevMonth()">←</button>
+     <span id="monthLabel"></span>
+     <button onclick="nextMonth()">→</button>
+    </div>
+
+    <div id="calendar"></div>
+
+    <ul id="taskList"></ul>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>

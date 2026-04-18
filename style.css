@@ -1,0 +1,146 @@
+/* 全体 */
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* アプリ全体 */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+}
+
+/* 入力欄 */
+input {
+  width: 200px;
+  padding: 8px;
+}
+
+#dateInput {
+    width: 150px;
+}
+
+/* 追加ボタン */
+button {
+  padding: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* タスクリスト */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+  background: #fafafa;
+  border-radius: 5px;
+}
+
+/* ボタンまとめ */
+li button {
+  margin-left: 5px;
+}
+
+small {
+    display: block;
+    font-size: 12px;
+    color: grey;
+}
+
+/* 完了状態 */
+.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+#calendar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 8px;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.day {
+    border: 1px solid #ccc;
+    min-height: 100px;
+    padding: 5px;
+    background: white;
+}
+
+#calendarHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+
+    white-space: nowrap;
+}
+
+h2{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+#monthLabel {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#calendarHeader button {
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .input-area {
+    flex-direction: column; /* 横→縦 */
+    align-items: center;
+  }
+
+  input {
+    width: 100%; /* 横いっぱい */
+  }
+
+  button {
+    width: 100%; /* 押しやすく */
+    margin: 5px 0;
+  }
+
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px; /* 少し詰める */
+  }
+
+  .day {
+    min-height: 60px; /* 小さく */
+    font-size: 12px;
+  }
+
+}
